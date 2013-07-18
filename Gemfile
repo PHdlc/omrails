@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.11'
 gem 'jquery-rails'
 
 
-group :production do
-	gem 'pg'
+group :production, :staging do
+  gem "pg"
 end
 
-
-group :devlopment, :test do
-	gem 'sqlite3'
+group :development, :test do
+  gem "sqlite3-ruby", "~> 1.3.0", :require => "sqlite3"
 end
 
 
@@ -19,11 +18,7 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-
-
-
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
 
